@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1f6f5c">
+<title>Pathfinder · 英语学习</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <!-- 侧边导航（桌面） -->
+  <aside id="sidebar">
+    <div class="brand">
+      <img src="assets/icon.svg" alt="" class="brand-logo">
+      <div class="brand-txt">
+        <strong>Pathfinder</strong>
+        <span>英语学习 · 探索者</span>
+      </div>
+    </div>
+    <nav id="nav">
+      <a data-view="home" class="nav-item active"><span class="ni-ic">🏠</span>首页</a>
+      <a data-view="words" class="nav-item"><span class="ni-ic">🔤</span>单词学习</a>
+      <a data-view="reading" class="nav-item"><span class="ni-ic">📖</span>短篇阅读</a>
+      <a data-view="dialogue" class="nav-item"><span class="ni-ic">🎙️</span>口语对话</a>
+      <a data-view="quotes" class="nav-item"><span class="ni-ic">🎬</span>影视台词</a>
+      <a data-view="books" class="nav-item"><span class="ni-ic">📚</span>英文原著</a>
+      <a data-view="prose" class="nav-item"><span class="ni-ic">✨</span>美文美句</a>
+      <a data-view="writing" class="nav-item"><span class="ni-ic">✍️</span>写作练习</a>
+      <a data-view="settings" class="nav-item"><span class="ni-ic">⚙️</span>设置</a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="streak-mini">
+        <span>🔥 连续学习</span><strong id="streakDays">0 天</strong>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 主内容 -->
+  <main id="main">
+    <header id="topbar">
+      <button id="menuBtn" class="icon-btn" aria-label="菜单">☰</button>
+      <h1 id="pageTitle">首页</h1>
+      <div class="topbar-right"></div>
+    </header>
+    <div id="view" class="view"></div>
+  </main>
+</div>
+
+<!-- 点词弹窗 -->
+<div id="dictPop" class="dict-pop hidden"></div>
+
+<!-- toast -->
+<div id="toast" class="toast"></div>
+
+<!-- ============ 数据 ============ -->
+<script src="data/words.js"></script>
+<script src="data/dict_extra.js"></script>
+<script src="data/dict_supp.js"></script>
+<script src="data/articles.js"></script>
+<script src="data/phrases.js"></script>
+<script src="data/quotes.js"></script>
+<script src="data/prose.js"></script>
+<script src="data/writing.js"></script>
+<script src="data/scenes.js"></script>
+<script src="data/books.js"></script>
+
+<!-- ============ 应用脚本 ============ -->
+<script src="js/util.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/speech.js"></script>
+<script src="js/dict.js"></script>
+<script src="js/llm.js"></script>
+<script src="js/app.js"></script>
+<script src="js/views/home.js"></script>
+<script src="js/views/words.js"></script>
+<script src="js/views/reading.js"></script>
+<script src="js/views/dialogue.js"></script>
+<script src="js/views/quotes.js"></script>
+<script src="js/views/books.js"></script>
+<script src="js/views/prose.js"></script>
+<script src="js/views/writing.js"></script>
+<script src="js/views/settings.js"></script>
+</body>
+</html>
